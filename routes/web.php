@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'DataController@select_data';
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
