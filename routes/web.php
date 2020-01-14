@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'DataController@select_data';
+Route::get('/', 'DataController@select_data');
 
 Auth::routes();
 
