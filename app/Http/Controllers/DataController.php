@@ -8,6 +8,7 @@ use App\forms;
 class DataController extends Controller
 {
 
+
     // Insert Data Fro Api ...
     public function insert_form(Request $request){
         
@@ -25,8 +26,5 @@ class DataController extends Controller
         echo $form->save();
     }
 
-    public function select_data(){
-        $forms = forms::all();
-        return view('home' , compact('forms'));
-    }
+  
 }
