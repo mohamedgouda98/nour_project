@@ -21,10 +21,12 @@ class CreateFormsTable extends Migration
             $table->string('adress');
             $table->string('phone');
             $table->string('fixed_line');
+            $table->string('project_name');
             $table->string('email');
             $table->string('type');
             $table->string('space');
             $table->string('know');
+            $table->string('sales');
             $table->timestamps();
         });
     }

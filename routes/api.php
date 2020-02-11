@@ -17,14 +17,30 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('list' , 'DataController@data');
 
 Route::post('insert_form' , 'DataController@insert_form');
 
-// Route::group([
-//     'middleware' => 'api',
-//     'prefix' =>'data'
-// ],function(){
-//     Route::get('data' , 'DataController@data');
+Route::get('projects_names' , 'DataController@projects_names');
 
-// });
+Route::get('all_fovrites' , 'DataController@all_fovrites');
+
+Route::post('add_fovrite' , 'DataController@add_fovrite');
+
+Route::delete('delete_fovrite/{id}' , 'DataController@delete_fovrite');
+
+Route::group([
+
+    'middleware' => 'api',
+     'prefix' => 'auth'
+
+], function ($router) {
+
+    Route::post('login', 'AuthController@login');
+    Route::post('logout', 'AuthController@logout');
+    Route::post('refresh', 'AuthController@refresh');
+    Route::post('me', 'AuthController@me');
+    Route::post('register', 'AuthController@register');
+    Route::patch('update', 'AuthController@update');
+
+
+});
