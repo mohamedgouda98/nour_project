@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Projects extends Model
 {
-    protected $fillable = ['name' , 'logo' , 'imgs' , 'location' , 'price' , 'sqft' , 'bedrooms' , 'kitchens' , 'bathrooms' , 'garage' , 'garden' , 'file'];
+    protected $fillable = ['name' , 'logo' , 'imgs' , 'location' , 'price' , 'sqft' , 'bedrooms' , 'kitchens' , 'bathrooms' , 'garage' , 'garden' , 'file' , 'lang'];
 
     // public function users(){
 

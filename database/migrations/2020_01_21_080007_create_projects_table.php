@@ -27,6 +27,7 @@ class CreateProjectsTable extends Migration
             $table->integer('garage');            
             $table->integer('garden');            
             $table->string('file');            
+            $table->boolean('lang');            
             $table->timestamps();
         });
     }

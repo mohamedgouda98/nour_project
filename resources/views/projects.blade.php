@@ -89,7 +89,12 @@
                                 <label for="exampleInputEmail1">Enter Garden</label>
                                 <input type="number" class="form-control" name="garden">
                                 <label for="exampleInputEmail1">Upload File</label>
-                                <input type="file" class="form-control" name="file">
+                                <input type="file" class="form-control" name="file"><br>
+                                <label for="exampleInputEmail1">Lang</label><br>
+                                <select name="lang">
+                                    <option value="0" selected>arabic</option>
+                                    <option value="1">english</option>
+                                </select>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Gooo</button>

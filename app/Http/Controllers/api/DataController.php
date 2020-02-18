@@ -28,7 +28,9 @@ class DataController extends Controller
 
     public function projects_names(){
 
-        $projects = projects::get();
+        $projects_arabic = projects::where('lang' , 0)->get();
+        $projects_english = projects::where('lang' , 1)->get();
+        $projects = ['arabic'=>$projects_arabic , 'english'=>$projects_english];
 
         return $this->apiResponse($projects , null , 200);
         

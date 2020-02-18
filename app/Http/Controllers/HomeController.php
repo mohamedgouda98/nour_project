@@ -78,6 +78,7 @@ class HomeController extends Controller
             $file->storeAs('public/attachments' , $file_name);
             $project->file = $file;
         }
+        $project->lang = $request->lang;
 
         $project->save();
 
